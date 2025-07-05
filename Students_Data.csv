@@ -1,0 +1,26 @@
+SQL> 
+SQL> SELECT * FROM students;
+         1,Amit Sharma                   ,        85,        78,        90,10th      ,Good
+         2,Pooja Verma                   ,        67,        74,        69,10th      ,Average
+         3,Ravi Kumar                    ,        92,        88,        95,12th      ,Excellent
+         4,Sneha Mehta                   ,        76,        80,        82,11th      ,Good
+         5,Manish Joshi                  ,        55,        60,        58,9th       ,Average
+         6,Divya Agarwal                 ,        89,        94,        90,12th      ,Excellent
+         7,Karan Singh                   ,        70,        65,        68,10th      ,Average
+         8,Ritu Gupta                    ,        82,        85,        88,11th      ,Good
+         9,Suresh Rathi                  ,        95,        98,        97,12th      ,Excellent
+        10,Neha Jain                     ,        73,        76,        79,10th      ,Good
+        11,Anil Thakur                   ,        60,        62,        65,9th       ,Average
+        12,Kavita Yadav                  ,        86,        88,        85,11th      ,Good
+        13,Rajeev Bansal                 ,        50,        55,        53,9th       ,Below Avg
+        14,Swati Desai                   ,        91,        93,        90,12th      ,Excellent
+        15,Tushar Patel                  ,        74,        70,        75,10th      ,Good
+        16,Nikita Roy                    ,        88,        90,        86,11th      ,Excellent
+        17,Varun Malhotra                ,        65,        69,        68,9th       ,Average
+        18,Priya Sen                     ,        78,        80,        82,11th      ,Good
+        19,Deepak Dey                    ,        59,        62,        64,9th       ,Below Avg
+        20,Meena Iyer                    ,        94,        91,        96,12th      ,Excellent
+SQL> 
+SQL> SPOOLÿOFF;
+SP2-0042: unknown command "SPOOLÿOFF" - rest of line ignored.
+SQL> spool off;
