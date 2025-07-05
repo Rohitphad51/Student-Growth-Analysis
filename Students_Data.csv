@@ -20,7 +20,4 @@ SQL> SELECT * FROM students;
         18,Priya Sen                     ,        78,        80,        82,11th      ,Good
         19,Deepak Dey                    ,        59,        62,        64,9th       ,Below Avg
         20,Meena Iyer                    ,        94,        91,        96,12th      ,Excellent
-SQL> 
-SQL> SPOOLÿOFF;
-SP2-0042: unknown command "SPOOLÿOFF" - rest of line ignored.
-SQL> spool off;
+
