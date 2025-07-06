@@ -1,56 +1,65 @@
-# 🎓 Student Growth Visualizer
+# 📊 Student Growth Visualizer using Oracle DB & Python
 
-A Python project that connects to an Oracle database and generates subject-wise performance graphs for students. It allows you to visualize marks in Physics, Chemistry, and Math with clean bar graphs using `matplotlib`.
+This project is a command-line Python tool to **analyze and visualize student academic performance** using an Oracle database backend. It allows users to generate subject-wise bar graphs for students based on user inputs like Student ID or Class Standard. It’s built for schools or institutions that want to visualize performance data from a central database.
 
 ---
 
-## 📖 Project Overview
+## 🎯 Project Objectives
 
-This is a simple CLI-based educational data visualization tool that helps teachers or institutions to:
+- Connect to Oracle database and fetch student data.
+- Generate **bar graphs** for subjects (Physics, Chemistry, Math).
+- Provide 3 different modes for graphing:
+  - All students
+  - Specific student by ID
+  - All students from a specific standard
 
-- View and analyze student marks.
-- Generate bar graphs for each student.
-- Filter data by student ID or standard.
+---
 
-All data is fetched from an Oracle database in real time.
+## 🧾 Dataset Structure (Oracle Table)
+
+Expected table name: `students`
+
+| Column Name     | Type     | Description                         |
+|-----------------|----------|-------------------------------------|
+| STUDENT_ID      | Number   | Unique ID for student               |
+| STUDENT_NAME    | Varchar  | Name of the student                 |
+| PHYSICS         | Number   | Physics marks (0-100)               |
+| CHEMISTRY       | Number   | Chemistry marks (0-100)             |
+| MATH            | Number   | Math marks (0-100)                  |
+| STANDARD        | Varchar  | Class/Grade                         |
+| REMARK          | Varchar  | Remarks (Pass/Fail/Excellent etc.)  |
 
 ---
 
 ## 🚀 Features
 
-- 📊 Graphs for all students in the database.
-- 🔍 Filter by **Student ID** to view individual performance.
-- 🏫 Filter by **Standard** (class) to see students of a particular grade.
-- 🎨 Beautiful bar graphs showing marks in Physics, Chemistry, and Math.
-- ⚠️ Handles missing values (None) by treating them as 0.
+- 📦 Connects to **Oracle XE (Express Edition)** database
+- 📊 Generates subject-wise **bar charts** for each student
+- 🔎 Fetches student info by ID or by standard
+- 💥 Handles missing data gracefully
+- 🧼 CLI-based user interaction
+- ✅ Clean code with error handling
 
 ---
 
-## 🧰 Technologies Used
+## 🛠 Requirements
 
-| Component     | Technology            |
-|---------------|------------------------|
-| Programming   | Python 3.x             |
-| Database      | Oracle XE              |
-| DB Connector  | `oracledb` (Python)    |
-| Graph Plotting| `matplotlib`           |
+- Python 3.7+
+- Oracle XE Database
+- Instant Client for Oracle installed locally
+- Python packages:
+  - `oracledb`
+  - `matplotlib`
 
 ---
 
-## 🗃️ Database Schema (Table: `students`)
+## 🔧 Installation & Setup
 
-Ensure your Oracle database contains a table named `students` with the following structure:
+### 🔹 1. Install Oracle Client
 
-```sql
-CREATE TABLE students (
-     Name                                      Null?    Type
- ----------------------------------------- -------- ----------------------------
- STUDENT_ID                                NOT NULL NUMBER
- STUDENT_NAME                                       VARCHAR2(30)
- PHYSICS                                            NUMBER
- CHEMISTRY                                          NUMBER
- MATH                                               NUMBER
- STANDARD                                           VARCHAR2(10)
- REMARK                                             VARCHAR2(20)
+Download and extract the Oracle Instant Client from:  
+👉 https://www.oracle.com/database/technologies/instant-client.html
 
-);
+Update path in script:
+```python
+oracledb.init_oracle_client(lib_dir=r"C:\oraclexe\instantclient_21_17")
